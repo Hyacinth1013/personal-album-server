@@ -1,3 +1,2 @@
-.PHONY:cloud
-cloud:cloud.cpp  util.hpp
-	g++ -std=c++17 $^ -o $@ -L./lib -lstdc++fs -ljsoncpp -lbundle -lpthread
+main:main.cpp util.hpp data.hpp
+	g++ -std=c++11 $^ -o $@ -L/usr/lib64/mysql -ljsoncpp -lmysqlclient -lpthread
