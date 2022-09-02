@@ -216,7 +216,7 @@ void InsertImage(const httplib::Request &req, httplib::Response &rsp)
 		rsp.status = 500;
 		return ;
 	}
-	rsp.status = 200;
+	rsp.set_redirect("/", 303);
 }
 
 int main()
